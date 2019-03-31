@@ -1,2 +1,2 @@
 # InterviewPrep
-Interview preparation questions
+Practice interview questions from different companies. (Google, Microsoft, Amazon, etc)
