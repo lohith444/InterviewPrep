@@ -19,7 +19,7 @@ import java.util.*;
  *
  * [4,3,5], 8 => [5,3]
  *
- * Naive solution: T= O(n*n), S= O(n)
+ * Naive solution: T= O(meeting.length * haveHours), S= O(meeting.length * haveHours)
  *  - Create a result meetingObj array and maxHours.
  *  - For each object in meeting object:
  *     - Create a temporary meetingObj array.
