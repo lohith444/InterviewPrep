@@ -12,3 +12,6 @@ Find the duplicate elements in the given array containing 1 to n. This can be do
 
 ## KthMostFrequent
 Find the kth most frequent string in a given list of strings. This can be done in O(N*logN) time and O(N) space.
+
+## IsBinaryTreeBalanced
+Check if the given binary tree is balanced in O(N) time and O(1) space.
