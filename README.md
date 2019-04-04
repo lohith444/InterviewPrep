@@ -19,3 +19,4 @@ Practice interview questions from different companies. (Google, Microsoft, Amazo
 3. FindTwoMissing.java : Find the two missing elements from 1 to n in the given array.
 4. FindDuplicates.java : Find the duplicate elements in the given array containing 1 to n.
 5. KthMostFrequent.java : Find the kth most frequent string in a given list of strings.
+6. IsBinaryTreeBalanced : Check if the given binary tree is balanced in O(N) time and O(1) space.
