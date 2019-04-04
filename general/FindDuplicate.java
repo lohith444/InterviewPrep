@@ -34,8 +34,9 @@ Using encoding: O(N) time, O(1) space.
  */
 
 class Solution {
-  public static int[] findDup(int[] arr) {
-    int[] res = new int[arr.length];
+  public static List<Integer> findDup(int[] arr) {
+    List<Integer> result = new ArrayList<>();
+    Set<Integer> resultSet = new HashSet<>();
     int start = 0;
     for (int i=0; i<arr.length; i++) {
       int val = Math.abs(arr[i]);
@@ -43,10 +44,11 @@ class Solution {
       if(arr[index] >= 0) {
         arr[index] = -arr[index];
       } else {
-        res[start++] = val; 
+        resultSet.add(val); 
       }
     }
-    return Arrays.copyOfRange(res, 0, start);
+    result.addAll(0, resultSet);
+    return result;
   }
   
   public static void printArr(int[] arr) {
@@ -57,14 +59,22 @@ class Solution {
     System.out.print("]");
   }
   
+  public static void printArr(List<Integer> arr) {
+    System.out.print("[");
+    for (int i=0; i<arr.size(); i++) {
+      System.out.print(arr.get(i) + " ");
+    }
+    System.out.print("]");
+  }
+  
   public static void main(String[] args) {
-    int[] arr = new int[]{1, 2, 1, 2};
+    int[] arr = new int[]{1, 2, 1, 2, 2};
     System.out.println("Input array: ");
     printArr(arr);
     
     System.out.println();
     
-    int[] res = findDup(arr);
+    List<Integer> res = findDup(arr);
     System.out.println("Duplicate elements:");
     printArr(res);
   }
