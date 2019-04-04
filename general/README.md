@@ -6,3 +6,6 @@ Find the zero sum contiguous sub-array from the given array. This can be done in
 
 ## FindTwoMissing
 Find the two missing elements from 1 to n in the given array. This can be done in O(N) time and O(1) space.
+
+## FindDuplicates
+Find the duplicate elements in the given array containing 1 to n. This can be done in O(N) time and O(1) space.
