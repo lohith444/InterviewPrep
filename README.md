@@ -16,3 +16,6 @@ Practice interview questions from different companies. (Google, Microsoft, Amazo
 ## General:
 1. MaxAreaHistogram.cpp : Maximum rectangle area of the given histogram. 
 2. ZeroSumSubArray.cpp : Find the zero sum contiguous sub-array.
+3. FindTwoMissing.java : Find the two missing elements from 1 to n in the given array.
+4. FindDuplicates.java : Find the duplicate elements in the given array containing 1 to n.
+5. KthMostFrequent.java : Find the kth most frequent string in a given list of strings.
