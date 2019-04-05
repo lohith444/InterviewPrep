@@ -22,3 +22,4 @@ Practice interview questions from different companies. (Google, Microsoft, Amazo
 6. IsBinaryTreeBalanced : Check if the given binary tree is balanced in O(N) time and O(1) space.
 7. MakeChange : Make change for the given input using minimum number of coins. O(N*N) space and time.
 8. CloneLinkedListWithRandom : Clone the given linked list in O(N) time and O(1) space.
+9. MedianOfSortedArrays : Find the median of two sorted arrays in O(logN) time and O(1) space.
