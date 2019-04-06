@@ -24,3 +24,4 @@ Practice interview questions from different companies. (Google, Microsoft, Amazo
 8. CloneLinkedListWithRandom : Clone the given linked list in O(N) time and O(1) space.
 9. MedianOfSortedArrays : Find the median of two sorted arrays in O(logN) time and O(1) space.
 10. MedianOfSortedUnequal : Median of two sorted arrays of unequal lengths in O(log(min(m,n))) time and O(1) space.
+11. DeleteMinChars : Find the minimum characters to be removed from the given string to make a valid string in the dictionary. This can be done in O(n!) time.
