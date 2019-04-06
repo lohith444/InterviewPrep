@@ -26,7 +26,10 @@ Clone the given linked list in O(N) time and O(1) space.
 Find the median of two sorted arrays in O(logN) time and O(1) space.
 
 ## MedianOfSortedUnequal
-Median of two sorted arrays of unequal lengths in O(log(min(m,n))) time and O(1) space.
+Median of two sorted arrays of unequal lengths in O(log(min(M,N))) time and O(1) space.
 
 ## DeleteMinChars
-Find the minimum characters to be removed from the given string to make a valid string in the dictionary. This can be done in O(n!) time.
+Find the minimum characters to be removed from the given string to make a valid string in the dictionary. This can be done in O(N!) time.
+
+## MaxSquareMatrix
+Find the maximum square matrix that can be formed by 1's from the given matrix. This can be done in O(N*N) time and space.
