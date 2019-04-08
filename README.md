@@ -26,3 +26,4 @@ Practice interview questions from different companies. (Google, Microsoft, Amazo
 10. MedianOfSortedUnequal : Median of two sorted arrays of unequal lengths in O(log(min(M,N))) time and O(1) space.
 11. DeleteMinChars : Find the minimum characters to be removed from the given string to make a valid string in the dictionary. This can be done in O(N!) time.
 12. MaxSquareMatrix : Find the maximum square matrix that can be formed by 1's from the given matrix. This can be done in O(N*N) time and space.
+13. MaxStack : Implement stack functions push, pop, max in O(1) time.
