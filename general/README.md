@@ -33,3 +33,6 @@ Find the minimum characters to be removed from the given string to make a valid 
 
 ## MaxSquareMatrix
 Find the maximum square matrix that can be formed by 1's from the given matrix. This can be done in O(N*N) time and space.
+
+## MaxStack
+Implement stack functions push, pop, max in O(1) time.
