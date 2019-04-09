@@ -36,3 +36,6 @@ Find the maximum square matrix that can be formed by 1's from the given matrix. 
 
 ## MaxStack
 Implement stack functions push, pop, max in O(1) time.
+
+## 0-1Knapsack
+0-1 knapsack problem in O(n*W) time and space
