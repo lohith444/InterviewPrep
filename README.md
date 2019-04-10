@@ -27,4 +27,5 @@ Practice interview questions from different companies. (Google, Microsoft, Amazo
 11. DeleteMinChars : Find the minimum characters to be removed from the given string to make a valid string in the dictionary. This can be done in O(N!) time.
 12. MaxSquareMatrix : Find the maximum square matrix that can be formed by 1's from the given matrix. This can be done in O(N*N) time and space.
 13. MaxStack : Implement stack functions push, pop, max in O(1) time.
-14. 0-1Knapsack : 0-1 knapsack problem in O(n*W) time and space
+14. 0-1Knapsack : 0-1 knapsack problem in O(n*W) time and space.
+15. GraphBFS : BFS traversal of a graph in O(V+E) time.
