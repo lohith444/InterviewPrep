@@ -42,3 +42,6 @@ Implement stack functions push, pop, max in O(1) time.
 
 ## GraphBFS
 BFS traversal of a graph in O(V+E) time.
+
+## BuildOrder
+Find the order of build for the given packages and dependencies using DFS in O(N) time.
