@@ -29,3 +29,4 @@ Practice interview questions from different companies. (Google, Microsoft, Amazo
 13. MaxStack : Implement stack functions push, pop, max in O(1) time.
 14. 0-1Knapsack : 0-1 knapsack problem in O(n*W) time and space.
 15. GraphBFS : BFS traversal of a graph in O(V+E) time.
+16. BuildOrder : Find the order of build for the given packages and dependencies using DFS in O(N) time.
