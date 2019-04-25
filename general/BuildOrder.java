@@ -44,72 +44,41 @@ Idea:
  */
 
 class Solution {
-  public static List<Integer> buildOrder(ArrayList<ArrayList<Integer>> processes) {
-    Set<Integer> tempMarks = new HashSet<Integer>();
-    Set<Integer> permMarks = new HashSet<Integer>();
-    List<Integer> results = new ArrayList<Integer>();
-    
-    for (int i=0; i<processes.size(); i++) {
-      if (!permMarks.contains(i)) {
-        visit(i, processes, tempMarks, permMarks, results);
-      }
+  public static List<Integer> buildOrder(List<int[]> packages) {
+        List<Integer> result = new ArrayList<>();
+        Set<Integer> permMarks = new HashSet<>();
+        Set<Integer> tempMarks = new HashSet<>();
+        for(int i=0; i < packages.size(); i++) {
+            if (!permMarks.contains(i)) {
+                visit(packages, i, permMarks, tempMarks, result);
+            }
+        }
+        return result;
     }
     
-    return results;
-  }
-  
-  private static void visit(int i, ArrayList<ArrayList<Integer>> processes, Set<Integer> tempMarks, Set<Integer> permMarks, List<Integer> results) {
-    if (tempMarks.contains(i)) throw new RuntimeException("cycles found");
-    
-    if (!permMarks.contains(i)) {
-      tempMarks.add(i);
-      for (int p : processes.get(i)) {
-        visit(p, processes, tempMarks, permMarks, results);
-      }
-      tempMarks.remove(i);
-      permMarks.add(i);
-      results.add(i);
+    private static void visit(List<int[]> packages, int i, Set<Integer> permMarks, Set<Integer> tempMarks, List<Integer> result) {
+        if (tempMarks.contains(i)) throw new RuntimeException("cycles found");
+        
+        if (!permMarks.contains(i)) {
+            tempMarks.add(i);
+            for (int p : packages.get(i)) {
+                visit(packages, p, permMarks, tempMarks, result);
+            }
+            tempMarks.remove(i);
+            permMarks.add(i);
+            result.add(i);
+        }
     }
-  }
-  
-  public static void main(String[] args) {
-    ArrayList<Integer> zeroth_deps = new ArrayList<Integer>();
-    ArrayList<Integer> first_deps = new ArrayList<Integer>() {
-      {
-        add(0);
-      }
-    };
-    ArrayList<Integer> second_deps = new ArrayList<Integer>() {
-      {
-        add(0);
-      }
-    };
-    ArrayList<Integer> third_deps = new ArrayList<Integer>() {
-      {
-        add(1);
-        add(2);
-      }
-    };
-    ArrayList<Integer> fourth_deps = new ArrayList<Integer>() {
-      {
-        add(3);
-      }
-    };
     
-    ArrayList<ArrayList<Integer>> pckgs = new ArrayList<ArrayList<Integer>>() {
-      {
-        add(zeroth_deps);
-        add(first_deps);
-        add(second_deps);
-        add(third_deps);
-        add(fourth_deps);
-      }
-    };
-    
-    List<Integer> results = buildOrder(pckgs);
-    
-    for (Integer i : results) {
-      System.out.print(i + " ");
+    public static void main(String[] args) {
+        List<int[]> packages = new ArrayList<int[]>();
+        packages.add(new int[]{});
+        packages.add(new int[]{0});
+        packages.add(new int[]{0});
+        packages.add(new int[]{1,2});
+        packages.add(new int[]{3});
+        List<Integer> result = buildOrder(packages);
+        System.out.println("Build order:");
+        for(int i : result) System.out.println(i);
     }
-  }
 }
