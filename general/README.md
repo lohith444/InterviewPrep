@@ -58,3 +58,5 @@ All types of sorting - Insertion, Selection, Quick, Merge and Heap sorts.
 ## LRUCache
 Implement LRU cache.
 
+## findLCA
+Find lowest common ancestor in a binary tree in O(N) time.
