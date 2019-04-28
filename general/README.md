@@ -54,3 +54,7 @@ Reverse the given linked list in O(N) time.
 
 ## Sorting
 All types of sorting - Insertion, Selection, Quick, Merge and Heap sorts.
+
+## LRUCache
+Implement LRU cache.
+
