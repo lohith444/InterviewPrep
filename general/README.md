@@ -51,3 +51,6 @@ DFS and BFS tree traversal in O(N) time.
 
 ## ReverseLinkedList
 Reverse the given linked list in O(N) time.
+
+## Sorting
+All types of sorting - Insertion, Selection, Quick, Merge and Heap sorts.
