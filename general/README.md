@@ -45,3 +45,6 @@ BFS traversal of a graph in O(V+E) time.
 
 ## BuildOrder
 Find the order of build for the given packages and dependencies using DFS in O(N) time.
+
+## TreeTraversal
+DFS and BFS tree traversal in O(N) time.
