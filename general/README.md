@@ -48,3 +48,6 @@ Find the order of build for the given packages and dependencies using DFS in O(N
 
 ## TreeTraversal
 DFS and BFS tree traversal in O(N) time.
+
+## ReverseLinkedList
+Reverse the given linked list in O(N) time.
