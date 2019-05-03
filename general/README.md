@@ -66,3 +66,6 @@ Find all the words starting with the given prefix.
 
 ## Rotate2dArray
 Rotate the given 2-D array 90 degree clockwise without using extra space.
+
+## ModularExponential
+Find the modular exponential for large numbers pow(A, B) % C
