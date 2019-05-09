@@ -72,3 +72,6 @@ Find the modular exponential for large numbers pow(A, B) % C
 
 ## IntegerToRoman
 Find the roman equivalent for the given integer.
+
+## EditDist
+Find the minimum number of edits required to convert str1 to str2 in O(m*n) time and space.
