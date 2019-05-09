@@ -31,53 +31,43 @@ import java.util.*;
 class Solution {
   public static boolean isMatch(String s, String p) {
     int s_len = s.length();
-    int p_len = p.length();
-    
-    if (p_len == 0) {
-      return s_len == 0;
-    }
-    
-    boolean[][] lookup = new boolean[s_len + 1][p_len + 1];
-    
-    for(int i = 0; i < s_len; i++) {
-      Arrays.fill(lookup[i], false);
-    }
-    
-    // empty string matches with empty pattern.
-    lookup[0][0] = true;
-    
-    for(int j = 1; j < p_len; j++) {
-      if (p.charAt(j-1) == '*') {
-        lookup[0][j] = lookup[0][j-1];
-      }
-    }
-    
-    // 1. If current pattern is *,then 
-    //    lookup[i][j] = lookup[i-1][j] || lookup[i][j-1]
-    // 2. If current pattern is . or matches with current string,
-    //    lookup[i][j] = lookup[i-1][j-1]
-    // 3. If current pattern does not match with current string, then
-    //    If next pattern is *, then
-    //        lookup[i][j] = lookup[i-1][j-1]
-    //    else
-    //        lookup[i][j] = false
-    for (int i = 1; i <= s_len; i++) {
-      for (int j = 1; j <= p_len; j++) {
-        if (p.charAt(j-1) == '*') {
-          lookup[i][j] = lookup[i-1][j] || lookup[i][j-1];
-        } else if ((p.charAt(j-1) == '.') || (s.charAt(i-1) == p.charAt(j-1))) {
-          lookup[i][j] = lookup[i-1][j-1];
-        } else {
-          if (j < p_len && p.charAt(j) == '*') {
-            lookup[i][j] = lookup[i-1][j-1];
-          } else {
-            lookup[i][j] = false;
-          }
+        int p_len = p.length();
+        
+        boolean[][] T = new boolean[s_len + 1][p_len + 1];
+        T[0][0] = true;
+        
+        // Considered string and pattern index starts from 1 in the table. 
+        // Hence i-1 and j-1 gives the current character to compare. 
+        for(int j = 1; j < T[0].length; j++) {
+            if(p.charAt(j-1) == '*') T[0][j] = T[0][j-2];
         }
-      }
-    }
-    
-    return lookup[s_len][p_len];
+        
+        for(int i = 1; i < T.length; i++) {
+            for(int j = 1; j < T[0].length; j++) {
+                char s_c = s.charAt(i - 1);
+                char p_c = p.charAt(j - 1);
+                /*             |1. T[i-1][j]                                            if p[j-1] == '.' || s[i-1] == p[j-1] 
+                 * T[i][j] =   |2. T[i][j-2]                                            if p[j-1] == '*'
+                 *             |    || T[i-1][j] if s[i-1] == p[j-2] || p[j-2] == '.'
+                 *             |3. false                                                otherwise
+                 */
+                if ((s_c == p_c) || (p_c == '.')) {
+                    T[i][j] = T[i-1][j-1];
+                } else if (p_c == '*') {
+                    if (T[i][j-2]) {
+                        T[i][j] = true;
+                    } else if (j > 1 && ((p.charAt(j - 2) == '.') || (p.charAt(j-2) == s_c))) {
+                        T[i][j] = T[i-1][j];
+                    } else {
+                        T[i][j] = false;
+                    }
+                } else {
+                    T[i][j] = false;
+                }
+            }
+        }
+        
+        return T[s_len][p_len];
   }
   
   public static void main(String[] args) {
