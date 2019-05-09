@@ -69,3 +69,6 @@ Rotate the given 2-D array 90 degree clockwise without using extra space.
 
 ## ModularExponential
 Find the modular exponential for large numbers pow(A, B) % C
+
+## IntegerToRoman
+Find the roman equivalent for the given integer.
