@@ -55,9 +55,29 @@ class Solution {
     return minCoinsDp(x, coins, cache);
   }
   
+  public static int minCoinsDp2(int x, int[] coins) {
+        int n = coins.length;
+        int[][] table = new int[n+1][x+1];
+        
+        for(int col=1; col<=x; col++) table[1][col] = col;
+        
+        for(int row=2; row<=n; row++) {
+            for(int col=1; col<=x; col++) {
+                int val = col - coins[row-1];
+                if (val < 0) {
+                    table[row][col] = table[row-1][col];
+                } else {
+                    table[row][col] = Math.min(table[row][val] + 1, table[row-1][col]);
+                }
+            }
+        }
+        return table[n][x];
+  }
+  
   public static void main(String[] args) {
     int[] coins = {1, 5, 10, 25};
     System.out.println("Min coins: " + minCoins(32, coins));
     System.out.println("Min coins: " + minCoinsDp(32, coins));
+    System.out.println("Min coins: " + minCoinsDp2(32, coins));
   }
 }
