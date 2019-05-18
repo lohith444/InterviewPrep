@@ -78,3 +78,6 @@ Find the minimum number of edits required to convert str1 to str2 in O(m*n) time
 
 ## BoggleSolver
 Find all the words from boggle that are present in dictionary in O(m*n*l) time
+
+## MaxConnectedGrid
+Find the maximum connected grid using DFS
