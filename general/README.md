@@ -81,3 +81,6 @@ Find all the words from boggle that are present in dictionary in O(m*n*l) time
 
 ## MaxConnectedGrid
 Find the maximum connected grid using DFS
+
+## NQueens
+Find the safe place to place N queens in a N*N grid.
