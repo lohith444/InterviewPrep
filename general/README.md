@@ -87,3 +87,6 @@ Find the safe place to place N queens in a N*N grid.
 
 ## KMPPatternMatching
 Find if pattern matches with given string using KMP which takes O(m+n) time and O(n) space. Naive algorithm will take O(m*n) time and O(1) space.
+
+## SubArraysWithXorB
+Given an array ‘A’ consisting of ‘N’ integers and an integer ‘B’, find the number of subarrays of array ‘A’ whose bitwise XOR of all elements is equal to ‘B’.
